@@ -1,4 +1,4 @@
-# 🌈 Calculator Application — Java Fundamentals 1 Workshop
+# 🌈 Calculator Application 
 
 > A console-based calculator application built with ☕ Java as part of the **Java Fundamentals 1 Workshop**.
 
