@@ -1,385 +1,324 @@
-# Calculator Application — Java Fundamentals 1 Workshop
+# 🌈 Calculator Application — Java Fundamentals 1 Workshop
 
-This project is a console-based calculator application built as part of the Java Fundamentals 1 Workshop. The goal is to practice basic Java concepts, user input handling, control structures, exception handling, and Maven project structure.
+> A console-based calculator application built with ☕ Java as part of the **Java Fundamentals 1 Workshop**.
 
-🚀 Features
+This project demonstrates:
 
-✅ Core Requirements
+✨ Basic Java programming concepts
+✨ User input handling
+✨ Control structures
+✨ Exception handling
+✨ Maven project structure
+✨ Unit testing with JUnit
 
-* Created as a Maven project.
+---
 
-* Supports basic operations:
-  
-  - Addition
-    
-  - Subtraction
-    
-  - Multiplication
- 
-  - Division
+# 🚀 Features
+
+## ✅ Core Requirements
+
+✔️ Maven-based Java project
+✔️ Supports basic mathematical operations:
+
+| Operation         | Symbol |
+| ----------------- | ------ |
+| ➕ Addition        | `+`    |
+| ➖ Subtraction     | `-`    |
+| ✖️ Multiplication | `*`    |
+| ➗ Division        | `/`    |
+
+---
+
+## 👨‍💻 User Capabilities
 
 Users can:
 
-  - Enter two (or more) numbers.
+* 🔢 Enter two or more numbers
+* 🧮 Choose a mathematical operator
+* 📊 View calculated results instantly
+* 🔁 Repeat calculations in a loop
+* ❌ Exit the program gracefully
 
-  - Choose the desired operator.
+---
 
-  - View the calculated result.
+# ⭐ Optional Enhancements
 
-* The application runs in a loop until the user chooses to exit.
+## 🛡️ Exception Handling
 
-* After each calculation, the user is given the option to:
-  
-  - Perform another operation
+Handles errors such as:
 
-  - Exit the program
+* ❌ Invalid number input
+* 🚫 Division by zero
+* ⚠️ Invalid operators
 
-⭐ Optional Enhancements 
+---
 
-* Option for addition and subtraction to handle multiple operands.
+## 🧪 JUnit Testing
 
-* Exception handling for:
+Tests included for:
 
-  - Invalid number input
+* ➕ Addition
+* ➖ Subtraction
+* ✖️ Multiplication
+* ➗ Division
 
-  - Dividing by zero
+---
 
-  - Invalid operator
+## 📈 Advanced Operations
 
-* JUnit tests for verifying:
-  
-  - Addition
+Additional supported operations may include:
 
-  - Subtraction
+| Operation     | Symbol |
+| ------------- | ------ |
+| √ Square Root | `sqrt` |
+| 🔺 Power      | `xⁿ`   |
+| 🧩 Modulo     | `%`    |
+| 📉 Percentage | `%`    |
 
-  - Multiplication
+---
 
-  - Division
+## 🎨 GUI Version (Optional)
 
+A graphical calculator can also be built using:
 
-* Ability to add advanced mathematical operations, such as:
-  
-  - Square root
+### 🪟 Swing
 
-  - Power (xⁿ)
+* Buttons for digits & operators
+* Display field for results
 
-  - Modulo
+### 🌟 JavaFX
 
-  - Percentage
+* Modern user interface
+* Layouts like `GridPane`
+* Interactive controls
 
-* Build a simple GUI version using:
+---
 
-  - Swing, or
+# 📂 Project Structure
 
-  - JavaFX
-
-
-📂 Project Structure (Example)
-
-```
+```bash id="d6x1j2"
 calculator-app/
-
 │── src/
-
 │   ├── main/
-
 │   │   └── java/
-
 │   │       └── com.example.calculator/
-
 │   │           ├── Calculator.java
-
 │   │           └── Main.java
-
 │   └── test/
-
 │       └── java/
-
 │           └── com.example.calculator/
-
 │               └── CalculatorTest.java
-
 │── pom.xml
-
 │── README.md
 ```
 
+---
 
-🧮 How the Application Works
+# 🧮 How the Application Works
 
-1️⃣ Start the program
+## 1️⃣ Start the Program
 
-The user is welcomed and prompted to enter:
+The user is prompted to enter:
 
 * The first number
+* The second number *(or more if supported)*
+* The mathematical operator
 
-* The second number (or more numbers, if supported)
+Supported operators:
 
-* The operator (`+`, `-`, `*`, `/`)
+```text id="b8f4v2"
++, -, *, /
+```
 
+---
 
-2️⃣ Perform the calculation
+## 2️⃣ Perform the Calculation
 
-The program evaluates the operation and prints the result.
+The program:
 
+✅ Evaluates the selected operation
+✅ Calculates the result
+✅ Displays the answer
 
-3️⃣ Continue or Exit
+---
 
-After showing the result, the program asks:
+## 3️⃣ Continue or Exit
 
-´´´Do you want to perform another calculation? (y/n)```
+After each calculation, the user is asked:
 
-* `y` → loops back
+```text id="f4x7a9"
+Do you want to perform another calculation? (y/n)
+```
 
-* `n` → program ends gracefully
+| Input | Action            |
+| ----- | ----------------- |
+| `y`   | 🔁 Repeat program |
+| `n`   | ❌ Exit program    |
 
-📦 Running the Project
+---
 
-## Using Maven
+# 📦 Running the Project
 
+## 🛠️ Using Maven
 
-```sh
-
+```bash id="v9m2l0"
 mvn clean install
 
 mvn exec:java -Dexec.mainClass="com.example.calculator.Main"
-
 ```
 
-## Using IDE
+---
 
-* Import project as Maven project
+## 💻 Using an IDE
 
-* Run the Main class
+1. Import the project as a Maven project
+2. Run the `Main` class
 
-🧪 Testing (Optional)
+---
 
-JUnit tests verify each mathematical operation:
+# 🧪 Testing
 
+JUnit tests verify each mathematical operation.
 
-```sh
+Run tests using:
 
+```bash id="h7j3q1"
 mvn test
 ```
 
-🎨 GUI Version (Optional)
+---
 
-A simple graphical calculator can be built using:
+# 🌱 Algorithm
 
-## Swing
-
-Buttons for digits \& operations
-
-   - Display field for results
-   
-## JavaFX
-
-  - Modern UI
-  - Layouts like GridPane for button arrangement
-
-🌱 1. Algorithm 
-
+```text id="y5t2p8"
 1. Start
-
 2. Ask the user to enter two numbers
-
-3. Ask the user which operation they want (`+`, `-`, `*`, `/`)
-
-4. Perform the chosen operation
-
+3. Ask the user to choose an operation (+, -, *, /)
+4. Perform the selected operation
 5. Display the result
+6. Ask if the user wants to continue
+7. Repeat or exit
+```
 
-6. Ask the user if they want to calculate again
+---
 
-7. If yes, repeat from step 2; otherwise end
+# 🌱 Pseudocode
 
-🌱 2. Pseudocode 
-
-```sql
-
-```BEGIN
+```sql id="n2c6w4"
+BEGIN
 
 DISPLAY "Enter first number"
-
 READ num1
 
 DISPLAY "Enter second number"
-
 READ num2
 
-DISPLAY "Enter operator (´+`, `-´, `\\\*´, `/`,))"
-
+DISPLAY "Enter operator (+, -, *, /)"
 READ op
 
 IF op = "+"
-   result ← num1 + num2
+    result ← num1 + num2
 
 ELSE IF op = "-"
+    result ← num1 - num2
 
-   result ← num1 - num2
-
-ELSE IF op = "\*"
-
-   result ← num1 \* num2
+ELSE IF op = "*"
+    result ← num1 * num2
 
 ELSE IF op = "/"
 
-   IF num2 = 0
+    IF num2 = 0
+        DISPLAY "Cannot divide by zero"
 
-       DISPLAY "Cannot divide by zero"
+    ELSE
+        result ← num1 / num2
 
-   ELSE
-
-       result ← num1 / num2
-
-   ENDIF
+    ENDIF
 
 ENDIF
 
 DISPLAY result
 
 END
-
-&nbsp;	```
-
 ```
 
-🌱 3. Flowchart
+---
 
-```
-           ┌──────────────┐
+# 🌱 Flowchart
 
-           │    START     │
+```text id="r7m8q3"
+┌──────────────┐
+│    START     │
+└───────┬──────┘
+        ▼
 
-           └───────┬──────┘
-
-                   ▼
-
-   ┌────────────────────────────┐
-
-    │ Input num1, num2, operator │
-    └──────────────┬─────────────┘
-                   ▼
-
-        ┌──────────────────┐
-
-        │ Check operator   │
-
-        └───────┬──────────┘
-
-                ▼
-
-    ┌─────────────────────┐
-
-   │ + → add numbers     │
-
-    └─────────────────────┘
-
-    ┌─────────────────────┐
-
-    │ - → subtract        │
-
-    └─────────────────────┘
-
-    ┌─────────────────────┐
-
-    │ \* → multiply        │
-
-    └─────────────────────┘
-
-    ┌─────────────────────┐
-
-    │ / → divide (check 0)│
-
-    └───────────┬─────────┘
-
-                ▼
-
-     ┌──────────────────────┐
-
-     │ Display the result   │
-
-     └───────────┬──────────┘
-
-                 ▼
-
-     ┌──────────────────────┐
-
-     │ Ask if user repeats  │
-
-     └───────┬────┬─────────┘
-
-             │yes │no
-
-             ▼    ▼
-
-     (go back)   END
-
-           ┌──────────────┐
-
-           │    START     │
-
-           └───────┬──────┘
-
-                   ▼
-
-    ┌────────────────────────────┐
-
-    │ Input num1, num2, operator │
-
-    └──────────────┬─────────────┘
-
-                   ▼
-
-       ┌──────────────────┐
-
-        │ Check operator   │
-
-        └───────┬──────────┘
-
+┌────────────────────────────┐
+│ Input num1, num2, operator │
+└──────────────┬─────────────┘
                ▼
-    ┌─────────────────────┐
 
-    │ + → add numbers     │
+┌──────────────────┐
+│ Check operator   │
+└───────┬──────────┘
+        ▼
 
-    └─────────────────────┘
+┌─────────────────────┐
+│ + → add numbers     │
+└─────────────────────┘
 
-    ┌─────────────────────┐
+┌─────────────────────┐
+│ - → subtract        │
+└─────────────────────┘
 
-    │ - → subtract        │
+┌─────────────────────┐
+│ * → multiply        │
+└─────────────────────┘
 
-    └─────────────────────┘
+┌─────────────────────┐
+│ / → divide (check 0)│
+└───────────┬─────────┘
+            ▼
 
-    ┌─────────────────────┐
+┌──────────────────────┐
+│ Display the result   │
+└───────────┬──────────┘
+            ▼
 
-    │ \* → multiply        │
-
-    └─────────────────────┘
-
-    ┌─────────────────────┐
-
-    │ / → divide (check 0)│
-
-    └───────────┬─────────┘
-
-                ▼
-     ┌──────────────────────┐
-
-     │ Display the result   │
-
-     └───────────┬──────────┘
-                 ▼
-
-    ┌──────────────────────┐
-     │ Ask if user repeats  │
-
-     └───────┬────┬─────────┘
-
-            │yes │no
-
-             ▼    ▼
-     (go back)   END
+┌──────────────────────┐
+│ Ask if user repeats  │
+└───────┬────┬─────────┘
+        │yes │no
+        ▼    ▼
+   (repeat)  END
 ```
 
+---
 
+# 🛠️ Built With
 
+| Technology        | Purpose                   |
+| ----------------- | ------------------------- |
+| ☕ Java            | Core programming language |
+| 📦 Maven          | Dependency management     |
+| 🧪 JUnit          | Unit testing              |
+| 🌟 JavaFX / Swing | GUI development           |
+
+---
+
+# 🌟 Learning Outcomes
+
+This project helps practice:
+
+✅ Variables & Data Types
+✅ Methods & Classes
+✅ Loops & Conditional Statements
+✅ Exception Handling
+✅ User Input with Scanner
+✅ Maven Project Structure
+✅ Unit Testing with JUnit
+
+---
+
+# 👨‍💻 Author
+
+Built with ❤️ during the Java Fundamentals Workshop.
