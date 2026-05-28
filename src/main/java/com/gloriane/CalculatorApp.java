@@ -9,12 +9,6 @@ public class CalculatorApp {
             // get input
             System.out.println("===== Welcome to My Calculator App =====");
 
-            //System.out.println("Enter first number:");
-            //double num1 = scanner.nextDouble();
-
-            //System.out.println("Enter second number:");
-            //double num2 = scanner.nextDouble();
-
             System.out.println("Select operation (+, -, *, /, sqrt, square, cube, %, percent):");
             String operation = scanner.next();
 
@@ -42,10 +36,9 @@ public class CalculatorApp {
                             result = result * result * result;
                             break;
                     }
-
-                    System.out.println("Result: " + result);
                 } catch (IllegalArgumentException e) {
                     System.out.println("Error: " + e.getMessage());
+                    continue;
                 }
             } else {
                 // Operations that need multiple numbers - use the loop
@@ -111,21 +104,4 @@ public class CalculatorApp {
         }
         scanner.close();
     }
-
-    /*
-    This is much simpler:
-    Ask for operation first
-    Get first number (becomes initial result)
-    Keep asking "add another number?"
-    Apply each new number to the running result
-    Show current result after each operation
-    When done adding numbers, show final result
-    Example flow:
-    Operation: +
-    First: 5
-    Add another? y → 3 → Current: 8
-    Add another? y → 2 → Current: 10
-    Add another? n → Final: 10
-    Much cleaner than arrays!
-     */
 }

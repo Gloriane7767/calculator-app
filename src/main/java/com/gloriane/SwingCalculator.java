@@ -1,4 +1,4 @@
-/*package com.gloriane;
+package com.gloriane;
 
 import javax.swing.*;
 import java.awt.*;
@@ -61,7 +61,7 @@ public class SwingCalculator extends JFrame implements ActionListener {
             display.setText("0");
             num1 = num2 = result = 0;
             operator = "";
-        } else if (command.matches("[+\\dash-star/]")) {
+        } else if (command.matches("[+\\-*/]")) {
             num1 = Double.parseDouble(display.getText());
             operator = command;
             operatorPressed = true;
@@ -76,7 +76,7 @@ public class SwingCalculator extends JFrame implements ActionListener {
                     else { display.setText("Error"); return; }
                     break;
             }
-            display.setText(String.valueOf(result));
+            display.setText(result % 1 == 0 ? String.valueOf((int)result) : String.valueOf(result));
             operatorPressed = true;
         }
     }
@@ -85,4 +85,3 @@ public class SwingCalculator extends JFrame implements ActionListener {
         SwingUtilities.invokeLater(() -> new SwingCalculator().setVisible(true));
     }
 }
- */
